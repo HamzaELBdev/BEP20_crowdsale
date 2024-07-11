@@ -3,7 +3,7 @@ const crowdSaleABI = require('./ABIs/crowdSaleContract.json');
 const munziABI = require('./ABIs/MunziContractABI.json');
 
 // Constants
-const BSC_TESTNET_EXPLORER_URL = 'https://testnet.bscscan.com/';
+const BSC_TESTNET_EXPLORER_URL = 'https://bscscan.com/';
 
 // Functions
 const getCrowdSaleContract = (web3) => {

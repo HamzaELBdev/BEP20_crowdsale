@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+
+div.presale-input {
+	display: flex;
+}
+
+.bnb,
+.v2e {
+	background-color: black;
+	color: aliceblue;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	border-top-left-radius: 50pX;
+	border-bottom-left-radius: 50pX;
+	border: 1px solid black;
+	height: auto;
+	text-align: center;
+	width: 50%;
+	border-right: none !important;
+	padding-top: 9px;
+
+}
+
+.bnb-logo,
+.v2e-logo {
+	background-color: black;
+	color: aliceblue;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	border-top-right-radius: 50pX;
+	border-bottom-right-radius: 50pX;
+	border: 1px solid black;
+	height: auto;
+	text-align: center;
+	width: 50%;
+	font-size: 15px;
+	border-left: none !important;
+	padding-top: 9px;
+
+
+
+}
+
+input#add-bnb,
+input#get-v2e {
+	width: 100%;
+	outline: none;
+	border: 1px solid black;
+
+}
+
+
+
+p.bnb-logo>img,
+p.v2e-logo>img {
+	width: 27PX;
+	animation: rotateLogo 10s linear infinite;
+
+}
+
+@keyframes rotateLogo {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* wallet_data */
+
+div.presale-input {
+	margin-top: 20px;
+	height: 45px !important;
+	font-family: 'Dosis', sans-serif;
+}
+
+
+button.connect-wallet {
+	background: linear-gradient(25deg,#000000 0,#555151 51.04%,#000000);
+	padding: 5px 20px;
+	border-radius: 50px;
+	border: 1px solid black;
+	color: white;
+	width: 60%;
+	margin: 10px 20%;
+	font-family: 'Dosis', sans-serif;
+}
+
+button.connect-wallet:hover {
+	background: linear-gradient(45deg,#000000 0,#555151 51.04%,#000000);
+	padding: 5px 20px;
+	border-radius: 50px;
+	border: 1px solid black;
+	color: white;
+	width: 60%;
+	margin: 10px 20%;
+	font-family: 'Dosis', sans-serif;
+}
+
+
+
+button.add-max {
+	background-color: black;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border: 1px solid black;
+	color: white;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+
+input#presale-address {
+	outline: none;
+	border: 1px solid black;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	width: 100%;
+	text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+input#presale-balance {
+	outline: none;
+	border: 1px solid black;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+}
+
+input#presale-v2e {
+	outline: none;
+	border: 1px solid black;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+
+p.address,
+p.balance {
+	background-color: black;
+	color: aliceblue;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	border-top-left-radius: 50pX;
+	border-bottom-left-radius: 50pX;
+	border: 1px solid black;
+	text-align: center;
+	border-right: none !important;
+	width: 70%;
+	padding-top: 9px;
+	font-family: 'Dosis', sans-serif;
+}
+
+.wallet_data {
+	background: linear-gradient(0deg, #b77120 0, #f6f58f 0%, #b77120);
+	padding: 15px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-top: 15px;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+
+}
+
+
+button.presale-done {
+	padding: 1.3em 3em;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background: linear-gradient(45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(161, 138, 9, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 10px;
+	font-weight: bolder;
+}
+
+button.presale-done:hover {
+  background: linear-gradient(-45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+  box-shadow: 0px 15px 20px rgba(189, 173, 33, 0.4);
+  color: #080808;
+  transform: translateY(-7px);
+  font-weight: bolder;
+  transition: all 0.2s ease-out;
+}
+
+button.presale-done:active {
+	transform: translateY(-1px);
+  }
+i.fa-exchange {
+	font-size: 45PX;
+	margin-top: 25px;
+	color: black;
+}
+
+div.presale_form_area {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border: 1.5 solid #fff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: auto;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+}
+
+div.rate {
+	text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-family: 'Dosis', sans-serif;
+	
+}
+
+
+/* Progress Bar */
+
+div.inprogress {
+	background-color: #b77120;
+}
+
+
+div.presale_form_area > div.progress {
+	margin-top: 50px;
+	border-radius: 5px;
+	border: 1.5px solid #b99804;
+	width: 80%;
+	margin-left: 10%;
+	background:#cba462c9 !important;
+	font-family: 'Dosis', sans-serif;
+}
+
+
+div.soft_cap_line {
+	width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent rgb(0 0 0 / 0%) #b77120 #b77120;
+    margin-bottom: -1PX;
+
+}
+
+p.soft_cap_text{
+	color: #121213;
+	font-weight: bold;
+	font-size: 12px;
+    text-align: CENTER;
+    width: 70PX;
+    border-radius: 8px;
+	background: linear-gradient(0deg, #b77120 0, #f6f58f 21.04%, #b77120);
+	border-top-left-radius: 0px;
+	font-family: 'Dosis', sans-serif;
+}
+
+
+div.presale_form_area > div.progress > div.progress-bar {
+	background: linear-gradient(45deg, #b77120 0, #f6f58f 51.04%, #b77120) !important;
+}
+
+.rate_detail{
+	margin-left: 5PX;
+	margin-right: 5PX;
+    border: 1.5PX SOLID #b77120;
+    BORDER-RADIUS: 0;
+    font-family: 'Dosis', sans-serif;
+    padding: 10PX;
+}
+
+.rate_tag > p{
+	border: 1.5px solid #b77120;
+    margin-bottom: 0px;
+    border-top-left-radius: 8PX;
+    border-top-right-radius: 8px;
+    margin-right: 5PX;
+	margin-left: 5PX;
+    background: linear-gradient(0deg, #b77120 0, #f6f58f 21.04%, #b77120);
+}
+
+
+.inprogress_tag > p {
+	color: #212529;
+    width: 30%;
+    margin-left: 35%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px;
+    background: linear-gradient(0deg, #b77120 0%, #f6f58f 100%, #b77120);
+    font-weight: bold;
+
+}
+
+.allrates{
+	display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.loader {
+	display: flex;
+	align-items: center;
+	margin-left: 8px;
+  }
+  
+  .bar {
+	display: inline-block;
+	width: 3px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	animation: scale-up4 1s linear infinite;
+  }
+  
+  .bar:nth-child(2) {
+	height: 15px;
+	margin: 0 5px;
+	animation-delay: .25s;
+  }
+  
+  .bar:nth-child(3) {
+	animation-delay: .5s;
+  }
+  
+  @keyframes scale-up4 {
+	20% {
+	  background-color: #000000;
+	  transform: scaleY(1.5);
+	}
+  
+	40% {
+	  transform: scaleY(1);
+	}
+  }
+
+  p.waiting{
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+  }
+
+
+  div.conref{
+	display: flex;
+	flex-direction: row;
+  }
+
+  i#refresh{
+	color:black;
+	width: 30px;
+	cursor: pointer;
+	transition: transform 2s ease-out;
+  }
+  i#refresh:hover{
+	transform: scale(1.2)
+  }
+  
+  
+
+  /* FILLED */
+  @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+.filled {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+  font-family:'Roboto';
+  text-align:center;
+  color: black;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+  
+}
+
+.animation div:first-child {
+  animation: text-animation 4s infinite;
+}
+
+
+
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  20% {margin-top: -5.62rem;} 
+  40% {margin-top: -11.24rem;}
+  80% {margin-top: -5.62rem;}
+  100% {margin-top: 0;}
+}
+
+/* Claim BUTTON */
+.contrubtion{
+	display: flex;
+	flex-direction: column;
+}
+
+.bnb_cont{
+	color: white;
+	padding: 5px 10px;
+	border-radius: 50px;
+	background-color: #000;
+	margin:5px;
+	width: 70%;
+	margin-left: 15%;
+}
+
+.bnb_cont > p{
+	margin-bottom: 0px!important;
+}
+
+button.claim_button{
+	padding: 1em;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background: linear-gradient(45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(161, 138, 9, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 10px;
+	font-weight: bolder;
+	width: 60%;
+	margin-left: 20%;
+}
+
+button.claim_button:hover {
+  background: linear-gradient(90deg,#b77120 0,#f6f58f 51.04%,#b77120);
+}
+
+button.claim_button:disabled{
+	background: linear-gradient(90deg,#696866 0,#b3b2af 51.04%,#646463);
+  }
+  
+
+
+button.claim_button:active{
+	transform: scale(0.95);
+} 
+
+
+p.prensale_ends{
+    color: #e6d9d9;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #000000 0,#2f2c2c 51.04%,#000000);
+    letter-spacing: 5PX;
+}

@@ -7,8 +7,7 @@ const BuyInput = (props) => {
   const [balance, setBalance] = useState(null);
   const [exceedBalance, setExceedBalance] = useState(false);
   
-  const toOptionalFixed = (num, digits) =>
-    `${Number.parseFloat(num.toFixed(digits))}`;
+  
 
   // get balance
   useEffect(() => {
@@ -102,7 +101,7 @@ const GetInput = (props) => {
   });
 
   const getRate = async () => {
-    const rate = await contract.methods.rate.call().call();
+    const rate = await contract.methods._rate.call().call();
     setRate(rate);
   };
 

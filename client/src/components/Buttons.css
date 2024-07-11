@@ -1,0 +1,147 @@
+
+/* GOLD BUTTON */
+
+button.gold_button{
+    text-transform: uppercase;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: rgb(32, 31, 31);
+	background: linear-gradient(45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+    border: 1.5px #b77120 solid;
+}
+
+button.gold_button:hover{
+    background: linear-gradient(-45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+}
+
+
+/* Vote Button */
+
+div.vote_button > p:hover{
+    border-radius:10px;
+}
+
+div.vote_button > p{
+    background:linear-gradient(90deg,#b77120 0,#f6f58f 51.04%,#b77120);
+    border-radius:20px;
+    width:60%;
+    text-align:center;
+    border:1px solid  #b77120;
+    margin-left:20%;
+    margin-top:5px;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all  0.2s ease-in;
+    color: rgb(12, 11, 11);
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+/* SIGN UP AND LOGIN */
+
+
+.button_option a{
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    font-size:14px;
+}
+
+
+button.button_option{
+    
+    background: transparent;
+    padding:5px 10px;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 60%;
+    margin-left:20%;
+
+}
+
+
+
+button.forgotten_button{
+    
+    background: transparent;
+    padding:5px 10px;
+    color:rgb(46, 44, 44);
+    border: none;
+
+}
+
+.register_area button.forgotten_button:hover{
+   font-weight:bold;
+}
+
+
+/* 
+UPDATE AND LIST TOKEN */
+
+button.update {
+    width: 30% !important;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 5px;
+    padding: 15px ;
+    margin-top: 10px;
+    background-image: linear-gradient(90deg, #000000 0%, #656669 100%);
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+
+}
+
+button.update:hover {
+    background-image: linear-gradient(90deg, #000000 100%, #656669 0%);
+}
+
+
+/* DASHBOARD CHANGE PASSWORD */
+
+.change_password{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: #000000;
+    color: #fff;
+    border: 1.5px solid #fff;
+    border-radius:25px;
+    padding:5px 10px;
+    margin-bottom:10px;
+    transition:all 0.2s ease-in;
+}
+.change_password:hover{
+    background-color: #ebe4e463;
+
+}
+
+.addtoken_dashboard{
+    border: 2px solid #b77120;
+    border-radius: 20px;
+    padding:5px 10px;
+    text-align: center;
+    margin: 10px;
+    width: 20%;
+    margin-left: 40%;
+    font-weight: bold;
+    background:linear-gradient(45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+
+}
+
+.addtoken_dashboard:hover{
+    background:linear-gradient(-45deg,#b77120 0,#f6f58f 51.04%,#b77120);
+
+}
