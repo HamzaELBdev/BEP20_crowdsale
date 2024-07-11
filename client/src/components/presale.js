@@ -8,8 +8,8 @@ import { CountdownTimer } from './CountdownTimer';
 import "./CountDown.css"
 import { TOKEN_ADDRESS, CROWD_SALE_ADDRESS } from './addresses';
 import './presale.css'
-import BnbLogo from '../images/tctlogo2.png'
-import V2ELogo from '../images/bnblogo.png'
+import  V2ELogo from '../images/tctlogo2.png'
+import  BnbLogo from '../images/bnblogo.png'
 
 function usePresale() {
 
