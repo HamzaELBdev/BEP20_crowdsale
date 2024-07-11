@@ -1,8 +1,9 @@
 .container {
+    border-radius:5px!important;
     padding: 10%;
     padding-top: 5%;
     margin: 2%;
-    background-color: rgb(165, 136, 245);
+    background: linear-gradient(45deg, rgba(182,145,33,1) 0%, rgba(118,82,14,1) 24%, rgba(237,197,49,1) 45%, rgba(146,108,21,1) 84%);    color:black;
 }
 
 .secondary {
@@ -27,15 +28,29 @@
 }
 
 #max_btn{
-    border: 0;
-    border-style: solid;
-    border-radius: 14px;
-    background-color: rgb(81, 17, 230);
+    border: 1px;
+    border-radius: 5px;
+    background-color: #8B1A13;
     color: whitesmoke;
-    padding: 1% 15% !important;
+    padding: 5px 15px!important;
     
 }
 
 .small_txt{
     font-size: smaller;
+}
+
+.banner{
+    width: 100%;
+    border-radius:5px;
+    margin-bottom:20px;
+}
+
+.css-14zef3j{
+    border-radius:5px!important;
+    border-color:black!important;
+}
+
+.text-muted {
+    color:white!important;
 }

@@ -19,6 +19,7 @@ import Web3 from 'web3';
 import { useState } from 'react';
 import { getBalance, buyToken } from './components/web3Utils';
 import { ConnectionToggleButtons } from './components/toggleButtons';
+import banner from './images/banner2.png'
 
 const DEFAULT_TOAST_TIME = 6000;
 
@@ -223,25 +224,15 @@ function App() {
       >
         <Grid item md={6} xs={12}>
           <Box sx={{ borderRadius: 10 }} className='container'>
-            <p className='text-center'>Munzi.io- ICO pad</p>
+           <img src={banner} className='banner'></img>
+
             <BuyInput
               web3={connected ? window.web3 : null}
               handleInput={(value) => setAmount(value)}
               value={amount}
             />
             <GetInput web3={connected ? window.web3 : null} value={amount} />
-            <Container className='mb-2'>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={Boolean(haveRef)}
-                    onChange={handleRefChange}
-                    inputProps={{ 'aria-label': 'controlled' }}
-                  />
-                }
-                label='Have a referral?'
-              />
-            </Container>
+          
             <div className='row'>
               <LoadingButton
                 loading={submitted}
@@ -250,7 +241,7 @@ function App() {
                 className='d-block rounded-pill'
                 onClick={() => submit()}
               >
-                Buy $MUN
+                Buy $TCT
               </LoadingButton>
             </div>
           </Box>
@@ -296,7 +287,7 @@ function App() {
             >
               Click here
             </Link>
-            <span> </span>to see your transaction
+            <span> </span>To see your transaction
           </span>
         </Alert>
       </Snackbar>
