@@ -10,11 +10,7 @@ import { TOKEN_ADDRESS, CROWD_SALE_ADDRESS } from './addresses';
 import './presale.css'
 import  V2ELogo from '../images/tctlogo2.png'
 import  BnbLogo from '../images/bnblogo.png'
-
-import Web3Modal from "web3modal";
-import WalletConnectProvider from "@walletconnect/web3-provider";
-import WalletLink from "walletlink";
-
+import Cookies from 'js-cookie';
 
 function usePresale() {
 
@@ -116,6 +112,8 @@ function usePresale() {
     window.web3 = new Web3();
     setConnection(false);
     setBothConnections(false);
+    localStorage.clear()
+    Cookies.remove('bg_proxy_revoked_wallet');
   };
 
   const web3 = new Web3(window.web3);
