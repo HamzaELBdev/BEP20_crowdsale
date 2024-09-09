@@ -34,34 +34,37 @@ function usePresale() {
   const THREE_DAYS_IN_MS = (endpresale - itsNow) * 1000;
   const NOW_IN_MS = new Date().getTime();
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
-  const connectToBscWallet = async () => {
-    try {
-      if (!window.BinanceChain) throw new Error('No MetaMask Wallet found');
 
-      console.log('No MetaMask Wallet found')
-      await window.BinanceChain.request({
-        method: 'eth_accounts',
-      });
-      window.web3 = new Web3(window.BinanceChain);
-      const chainId = await window.web3.eth.getChainId();
-      if (chainId !== 56)
-        throw new Error('Only Binance Smart Chain Testnet Allowed to Connect');
 
-      swal(
 
-        '',
-        'Connected to Binance Wallet Successfully.',
-        'success'
-      );
-      return setConnection(true);
-    } catch (error) {
-      return swal(
-        'error',
-        'ERROR_CONNECTING_BINANCE_WALLET',
-        error.message ? error.message : 'Something Went Wrong.'
-      );
-    }
-  };
+  // const connectToBscWallet = async () => {
+  //   try {
+  //     if (!window.BinanceChain) throw new Error('No MetaMask Wallet found');
+
+  //     console.log('No MetaMask Wallet found')
+  //     await window.BinanceChain.request({
+  //       method: 'eth_requestAccounts',
+  //     });
+  //     window.web3 = new Web3(window.BinanceChain);
+  //     const chainId = await window.web3.eth.getChainId();
+  //     if (chainId !== 56)
+  //       throw new Error('Only Binance Smart Chain Testnet Allowed to Connect');
+
+  //     swal(
+
+  //       '',
+  //       'Connected to Binance Wallet Successfully.',
+  //       'success'
+  //     );
+  //     return setConnection(true);
+  //   } catch (error) {
+  //     return swal(
+  //       'error',
+  //       'ERROR_CONNECTING_BINANCE_WALLET',
+  //       error.message ? error.message : 'Something Went Wrong.'
+  //     );
+  //   }
+  // };
 
   const connectToEthWallet = async () => {
     try {
@@ -86,11 +89,8 @@ function usePresale() {
 
   const connect = async () => {
     try {
-      if (window.ethereum && window.BinanceChain)
-        return setBothConnections(true);
 
       if (window.ethereum) return connectToEthWallet();
-      if (window.BinanceChain) return connectToBscWallet();
 
       return new Error('No Wallets Found');
 
