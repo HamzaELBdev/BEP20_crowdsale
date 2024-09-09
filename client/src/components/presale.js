@@ -70,13 +70,7 @@ function usePresale() {
  
   const connectToEthWallet = async () => {
     try {
-      if (!window.ethereum) throw new Error(
-        Swal.fire({
-          icon: "error",
-          title: "Metamask not detected!!",
-          footer: '<a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=fr">Install Metamask</a>'
-        })
-      );
+      if (!window.ethereum) throw new Error(console.log('No MetaMask Wallet found'));
       await window.ethereum.request({
         method: 'eth_requestAccounts',
       });
@@ -87,11 +81,11 @@ function usePresale() {
 
       return setConnection(true);
     } catch (error) {
-      return swal(
-        'ERROR_CONNECTING_BINANCE_WALLET',
-        error.message ? error.message : 'Something Went Wrong.',
-        'error'
-      );
+      return Swal.fire({
+        icon: "error",
+        title: "Metamask not detected!!",
+        footer: '<a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=fr">Install Metamask</a>'
+      })
     }
   };
 
