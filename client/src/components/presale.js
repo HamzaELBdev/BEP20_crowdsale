@@ -11,6 +11,11 @@ import './presale.css'
 import  V2ELogo from '../images/tctlogo2.png'
 import  BnbLogo from '../images/bnblogo.png'
 
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import WalletLink from "walletlink";
+
+
 function usePresale() {
 
   const [allbnb, setAllbnb] = useState()
@@ -66,6 +71,7 @@ function usePresale() {
   //   }
   // };
 
+ 
   const connectToEthWallet = async () => {
     try {
       if (!window.ethereum) throw new Error(console.log('No MetaMask Wallet found'));
@@ -91,7 +97,6 @@ function usePresale() {
     try {
 
       if (window.ethereum) return connectToEthWallet();
-
       return new Error('No Wallets Found');
 
     } catch (error) {
@@ -102,6 +107,9 @@ function usePresale() {
       );
     }
   };
+
+
+
 
 
   const disConnect = async () => {

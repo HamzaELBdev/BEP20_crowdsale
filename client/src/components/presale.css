@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
+body{
+background: black;
+}
+
 
 div.presale-input {
 	display: flex;
@@ -79,21 +83,21 @@ div.presale-input {
 
 
 button.connect-wallet {
-	background: linear-gradient(25deg,#000000 0,#555151 51.04%,#000000);
+	background: linear-gradient(114deg, rgba(63,94,251,1) 7%, rgba(252,70,107,1) 100%);
 	padding: 5px 20px;
 	border-radius: 50px;
-	border: 1px solid black;
-	color: white;
+	border: 2px solid rgb(53, 5, 97);
+	color: rgb(26, 3, 90);
 	width: 60%;
 	margin: 10px 20%;
 	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
 }
 
 button.connect-wallet:hover {
-	background: linear-gradient(45deg,#000000 0,#555151 51.04%,#000000);
+	background: linear-gradient(90deg, rgba(63,94,251,1) 7%, rgba(252,70,107,1) 100%);
 	padding: 5px 20px;
 	border-radius: 50px;
-	border: 1px solid black;
 	color: white;
 	width: 60%;
 	margin: 10px 20%;
@@ -208,9 +212,7 @@ i.fa-exchange {
 div.presale_form_area {
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
-	border: 1.5 solid #fff;
-	border-bottom-left-radius: 5px;
+	background: linear-gradient(114deg, rgba(126,63,251,0.227328431372549) 7%, rgba(252,70,107,0.4990371148459384) 100%);	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	height: auto;
 	text-align: center;
@@ -226,6 +228,7 @@ div.rate {
     font-family: 'Dosis', sans-serif;
 	
 }
+
 
 
 /* Progress Bar */
@@ -279,6 +282,7 @@ div.presale_form_area > div.progress > div.progress-bar {
     BORDER-RADIUS: 0;
     font-family: 'Dosis', sans-serif;
     padding: 10PX;
+	color: #d8d4d0;
 }
 
 .rate_tag > p{
