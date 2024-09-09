@@ -70,7 +70,13 @@ function usePresale() {
  
   const connectToEthWallet = async () => {
     try {
-      if (!window.ethereum) throw new Error(console.log('No MetaMask Wallet found'));
+      if (!window.ethereum) throw new Error(
+        Swal.fire({
+          icon: "error",
+          title: "Metamask not detected!!",
+          footer: '<a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=fr">Install Metamask</a>'
+        })
+      );
       await window.ethereum.request({
         method: 'eth_requestAccounts',
       });
