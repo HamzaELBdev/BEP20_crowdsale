@@ -89,7 +89,7 @@ function usePresale() {
       return setConnection(true);
     } catch (error) {
       return swal(
-        'EBinance Mainnet !!',
+        'ERROR_CONNECTING_BINANCE_WALLET',
         error.message ? error.message : 'Something Went Wrong.',
         'error'
       );
@@ -139,7 +139,7 @@ function usePresale() {
     if (!connected) return console.log('Not Connected'), swal('Not Connected', 'Please Connect to Wallet', 'error');
     if (hardcap == weiRaised) return swal('FILLED', 'Second Presale Very SOON', 'info');
     if ( allbnb > ((hardcap - weiRaised)/10 ** 18)) return swal('$TCT', 'Only '+((((hardcap - weiRaised)* rate)/10 ** 18).toFixed(0))+' VE2 For Selling' , 'info');
-    if (allbnb < (minbuy/10**18) || allbnb > (maxbuy/10**18) ) return swal('Not Enough BNB', 'Min ' +  (minbuy/10**18) + ' BNB and Max' +  (maxbuy/10**18) +' BNB' , 'info');
+    if (allbnb < (minbuy/10**18) || allbnb > (maxbuy/10**18) ) return swal('Not Enough BNB', 'Min ' +  (minbuy/10**18) + ' BNB and Max' +  (maxbuy/10**18) +' BNB' + 'FEES 0.000152 BNB' , 'info');
     if (!allbnb) return swal('Not Enough BNB', 'Please set you BNB amount to buy' , 'info');
     if ((Date.now()/1000) > endpresale) return swal('PRESALE FINISHED', '' , 'info');
     if (mycontrubtion > maxbuy) return swal('MAX CONTRUBTION REACHED FOR THIS WALLET', 'you can buy with: '+ ((maxbuy - mycontrubtion)/10**18).toFixed(2) + 'BNB' , 'info');
@@ -225,7 +225,7 @@ function usePresale() {
     else{
       Swal.fire({
         icon: 'error',
-        title: 'CLAIM NOT POSSIBLE',
+        title: 'PRESALE NOT FINISHED',
       })
     }
 
@@ -272,7 +272,7 @@ function usePresale() {
             <div className='wallet_data'>
               <div className='conref'><button className='connect-wallet' onClick={() => connected ? disConnect() : connect()}> {connected ? 'Disconnect Wallet' : 'Connect Wallet'}</button>{connected ? <i className="fas fa-redo" id="refresh" onClick={()=>Refresh()}></i>:null}</div>
               {connected ? <div className="presale-input"><p className="address">Address</p><input readOnly type="text" id="presale-address" placeholder="0x682ccC366E...c124788b8D8" value={adresswallet.slice(0, 10) + '.......' + adresswallet.slice(-10)} name="bnb" autoComplete="on" /> </div> : null}
-              {connected ? <div className="presale-input"><p className="balance">Balance (BNB)</p><input readOnly type="text" id="presale-balance" placeholder="0.09 BNB" name="bnb" Value={balance} onChange={(e) => setMaxbnb(e.target.value)} autoComplete="on" /><button className='add-max' onClick={() => setAllbnb(parseFloat(balance - 0.0006 ).toFixed(4) )}>MAX</button> </div> : null}
+              {connected ? <div className="presale-input"><p className="balance">Balance (BNB)</p><input readOnly type="text" id="presale-balance" placeholder="0.09 BNB" name="bnb" Value={balance} onChange={(e) => setMaxbnb(e.target.value)} autoComplete="on" /><button className='add-max' onClick={() => setAllbnb(parseFloat(balance - 0.000152 ).toFixed(4) )}>MAX</button> </div> : null}
               {connected ? <div className="presale-input"><p className="balance">Balance (TCT)</p><input readOnly type="text" id="presale-v2e" placeholder="0.09 BNB" name="bnb" Value={(v2eBalance*10**(-18)).toFixed(2)}  autoComplete="on" /> </div> : null}
             </div>
 
