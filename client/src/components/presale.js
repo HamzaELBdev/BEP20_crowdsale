@@ -11,6 +11,7 @@ import './presale.css'
 import  V2ELogo from '../images/tctlogo2.png'
 import  BnbLogo from '../images/bnblogo.png'
 import Cookies from 'js-cookie';
+import { match } from 'assert';
 
 function usePresale() {
 
@@ -83,12 +84,12 @@ function usePresale() {
       window.web3 = new Web3(window.ethereum);
       const chainId = await window.web3.eth.getChainId();
       if (chainId !== 56)
-        throw new Error('Only Binance Smart Chain Allowed to Connect');
+        throw new Error('Binance Mainnet !!');
 
       return setConnection(true);
     } catch (error) {
       return swal(
-        'ERROR_CONNECTING_BINANCE_WALLET',
+        'EBinance Mainnet !!',
         error.message ? error.message : 'Something Went Wrong.',
         'error'
       );
@@ -96,7 +97,9 @@ function usePresale() {
   };
 
   const connect = async () => {
+
     try {
+      Cookies.remove('bg_proxy_revoked_wallet');
 
       if (window.ethereum) return connectToEthWallet();
       return new Error('No Wallets Found');
@@ -109,9 +112,6 @@ function usePresale() {
       );
     }
   };
-
-
-
 
 
   const disConnect = async () => {
@@ -272,7 +272,7 @@ function usePresale() {
             <div className='wallet_data'>
               <div className='conref'><button className='connect-wallet' onClick={() => connected ? disConnect() : connect()}> {connected ? 'Disconnect Wallet' : 'Connect Wallet'}</button>{connected ? <i className="fas fa-redo" id="refresh" onClick={()=>Refresh()}></i>:null}</div>
               {connected ? <div className="presale-input"><p className="address">Address</p><input readOnly type="text" id="presale-address" placeholder="0x682ccC366E...c124788b8D8" value={adresswallet.slice(0, 10) + '.......' + adresswallet.slice(-10)} name="bnb" autoComplete="on" /> </div> : null}
-              {connected ? <div className="presale-input"><p className="balance">Balance (BNB)</p><input readOnly type="text" id="presale-balance" placeholder="0.09 BNB" name="bnb" Value={balance} onChange={(e) => setMaxbnb(e.target.value)} autoComplete="on" /><button className='add-max' onClick={() => setAllbnb(balance)}>MAX</button> </div> : null}
+              {connected ? <div className="presale-input"><p className="balance">Balance (BNB)</p><input readOnly type="text" id="presale-balance" placeholder="0.09 BNB" name="bnb" Value={balance} onChange={(e) => setMaxbnb(e.target.value)} autoComplete="on" /><button className='add-max' onClick={() => setAllbnb(parseFloat(balance - 0.0006 ).toFixed(4) )}>MAX</button> </div> : null}
               {connected ? <div className="presale-input"><p className="balance">Balance (TCT)</p><input readOnly type="text" id="presale-v2e" placeholder="0.09 BNB" name="bnb" Value={(v2eBalance*10**(-18)).toFixed(2)}  autoComplete="on" /> </div> : null}
             </div>
 
